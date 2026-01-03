@@ -1,6 +1,14 @@
 name: Hello world
 # triggers  - Event, Manual, scheduled, workflow
-on: push
+on:
+  push: 
+    branches:
+      - main
+      - develop
+      - 'resolve@'
+  pull:
+    branches:
+      - main    
 jobs:
   build:
     runs-on: ubuntu-latest
